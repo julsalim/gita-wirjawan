@@ -65,12 +65,11 @@
            {{ $books->isi }}
         </div>
         
-        {{-- @if ($books->video != 'none') --}}
         <div class="fs-5 mt-4">
             Video Section
         </div>
-        <iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/0-S5a0eXPoc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        {{-- @endif --}}
+        <iframe width="100%" height="500" src="{{ $books->video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
     </div>
 
 </body>
