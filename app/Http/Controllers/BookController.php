@@ -9,7 +9,7 @@ use App\Models\books;
 class BookController extends Controller
 {
     public function index() {
-        $highlight = books::where('id', '=', '1')->get();
+        $highlight = books::where('id', '=', '1')->get(); // Ini ownernya yang pilih (sesuai ketentuan soal)
         $latest = books::orderBy('tanggal', 'desc')->take(4)->get();
         $books = books::latest()->simplePaginate(3);
 

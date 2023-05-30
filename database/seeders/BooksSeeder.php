@@ -33,9 +33,6 @@ class BooksSeeder extends Seeder
     {
         require_once 'vendor/autoload.php';
         $faker = Faker::create('en_US');
-        // $faker = new Faker\Generator();
-        // $faker->addProvider(new Faker\Provider\en_US\Person($faker));
-        // $faker->addProvider(new Faker\Provider\en_US\Text($faker));
         $faker->addProvider(new Book($faker));
 
 
@@ -51,7 +48,7 @@ class BooksSeeder extends Seeder
                 'tanggal' => $faker->date,
                 'reading_time' => $kategoriBaca.' Read',
                 'isi' => $faker->realText(1000),
-                'video' => mt_rand(0,1) == 1 ? 'https://www.youtube-nocookie.com/embed/0-S5a0eXPoc?controls=0' : 'none',
+                'video' => mt_rand(0,1) == 1 ? 'https://www.youtube-nocookie.com/embed/0-S5a0eXPoc?controls=0' : 'https://www.youtube-nocookie.com/embed/X8ipUgXH6jw?controls=0',
             ]);
         }
 
